@@ -6,5 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-quicksilver = {version = "0.4.0"}
+# More features: "collisions", "complex_shapes", "immi_ui", "sounds", gamepads
+quicksilver = { version = "0.3.6", default-features = false, features = ["fonts", "saving"]}
 

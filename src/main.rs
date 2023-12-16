@@ -1,4 +1,9 @@
-use quicksilver::{geom::Vector, run, Graphics, Input, Result, Settings, Window};
+use quicksilver::{
+    geom::Vector,
+    lifecycle::{run, Settings, State, Window},
+    Result,
+};
+
 struct Game;
 
 impl State for Game {
@@ -22,7 +27,5 @@ fn main() {
     let settings = Settings {
         ..Default::default()
     };
-    run(settings, app)
+    run::<Game>("Quicksilver Roguelike", Vector::new(800, 600), settings);
 }
-
-async fn app(window: Window, mut gfx: Graphics, mut input: Input) -> Result<()> {}
